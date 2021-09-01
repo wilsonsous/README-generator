@@ -1,6 +1,6 @@
 // imports
 const inquirer = require("inquirer")
-const generatorMarkdown = required("./generatorMarkdown")
+const generatorMarkdown = require("./generatorMarkdown")
 const fs = require("fs")
 
 // Set of questions for the user
@@ -53,25 +53,36 @@ const questions = [
 ]
 
 // Functionality for README file
-function writeToFile(fileName, data){
+inquirer.prompt(questions).then(function(response) {
+    console.log(response);
+    
+     var content = generatorMarkdown(response);
+     console.log(content);
+      fs.writeFile("./ReadMe.md", content, function(err){
+          if (err) throw err
+          console.log("success");
+      });
+ } ); 
+ 
 
-    fs.writeFile(fileName, data, function(err) {
-        console.log(fileName)
-        console.log(data)
-        if (err) {
-            return console.log(err);
-        } else {
-            console.log ("Sucessfully wrote:" + fileName);
-        }
-    })
-}
+// function writeToFile(fileName, data){
+//     fs.writeFile(fileName, data, function(err) {
+    //         console.log(fileName)
+//         console.log(data)
+//         if (err) {
+//             return console.log(err);
+//         } else {
+//             console.log ("Sucessfully wrote:" + fileName);
+//         }
+//     })
+// }
 
-function init () {
-    inquirer.prompt(questions)
-    .then(function(data) {
-        writeToFile('test.md', generatorMarkDown(data));
-        console.log(data.License)
-    })
-}
+// function init () {
+//     inquirer.prompt(questions)
+//     .then(function(data) {
+//         writeToFile('test.md', generatorMarkDown(data));
+//         console.log(data.License)
+//     })
+// }
 
-init();
+// init();
