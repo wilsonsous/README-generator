@@ -1,10 +1,10 @@
 // README template
 function generatorMarkdown(data) {
     return`
-  # ${data.Title}
-  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/${data.UserName}/${data.Title})
+  # ${data.title}
+  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/${data.username}/${data.title})
   # Description
-  ${data.Description}
+  ${data.description}
   # Table of Contents 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -13,17 +13,17 @@ function generatorMarkdown(data) {
   * [Tests](#tests)
   * [Questions](#questions)
   # Installation
-  The following necessary dependencies must be installed to run the application properly: ${data.Installation}
+  The following necessary dependencies must be installed to run the application properly: ${data.install}
   # Usage
-  ​This application is used for ${data.Usage}
+  ​This application is used for ${data.instructions}
   # License
-  This project is license under the ${data.License} license.
+  This project is license under the ${data.license} license.
   # Contributing
-  ​Contributors: ${data.Contributor}
+  ​Contributors: ${data.contributors}
   # Tests
-  To run tests, you need to run the following command: ${data.Test}
+  To run tests, you need to run the following command: ${data.test}
   # Questions
-  If you have any questions about the repo, open an issue or contact ${data.UserName} directly ${data.Email}.
+  If you have any questions about the repo, open an issue or contact ${data.username} directly ${data.email}.
   `
   }
   

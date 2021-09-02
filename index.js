@@ -50,6 +50,16 @@ const questions = [
         message: "Who contributed to this given project?",
         name: "contributors",
     },
+    {
+        type: "input",
+        message: "Does it have a test?",
+        name: "test",
+    },
+    {
+        type: "input",
+        message: "Does it have a license?",
+        name: "license",
+    },
 ]
 
 // Functionality for README file
@@ -58,31 +68,8 @@ inquirer.prompt(questions).then(function(response) {
     
      var content = generatorMarkdown(response);
      console.log(content);
-      fs.writeFile("./ReadMe.md", content, function(err){
+      fs.writeFile("./GENERATEDREADME.md", content, function(err){
           if (err) throw err
           console.log("success");
       });
  } ); 
- 
-
-// function writeToFile(fileName, data){
-//     fs.writeFile(fileName, data, function(err) {
-    //         console.log(fileName)
-//         console.log(data)
-//         if (err) {
-//             return console.log(err);
-//         } else {
-//             console.log ("Sucessfully wrote:" + fileName);
-//         }
-//     })
-// }
-
-// function init () {
-//     inquirer.prompt(questions)
-//     .then(function(data) {
-//         writeToFile('test.md', generatorMarkDown(data));
-//         console.log(data.License)
-//     })
-// }
-
-// init();
