@@ -1,8 +1,8 @@
 
-  # a
-  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/a/a)
+  # 
+  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com//)
   # Description
-  a
+  
   # Table of Contents 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -11,15 +11,15 @@
   * [Tests](#tests)
   * [Questions](#questions)
   # Installation
-  The following necessary dependencies must be installed to run the application properly: a
+  The following necessary dependencies must be installed to run the application properly: 
   # Usage
-  ​This application is used for a
+  ​This application is used for 
   # License
-  This project is license under the a license.
+  This project is license under the  license.
   # Contributing
-  ​Contributors: a
+  ​Contributors: 
   # Tests
-  To run tests, you need to run the following command: a
+  To run tests, you need to run the following command: 
   # Questions
-  If you have any questions about the repo, open an issue or contact a directly a.
+  If you have any questions about the repo, open an issue or contact  directly .
   
